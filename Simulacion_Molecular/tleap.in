@@ -1,0 +1,12 @@
+source leaprc.gaff2
+source leaprc.water.tip3p
+loadamberparams frcmod.chex
+
+HEX = loadmol2 chex.mol2
+
+sis = copy HEX
+solvatebox sis HEX 20 1
+solvatebox sis TIP3PBOX 4
+savepdb sis pre_sis.pdb
+saveamberparm sis sis.parm7 sis.rst7
+quit

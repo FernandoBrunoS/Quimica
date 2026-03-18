@@ -1,0 +1,25 @@
+Heat
+ &cntrl
+  imin=0, ! no es una minimización
+  ntx=1, ! lee coordenadas
+  irest=0, ! no está reiniciando
+  nstlim=10000, ! NUMERO DE PASOS LIMITE
+  dt=0.002, ! Paso de tiempo y esta dado en picosegundos, hay que cambiarlo a 0.001 si quieres ver vibraciones de enlaces con H
+  ntf=2, ! SHAKE, hay que cambiarlo a 1 si quieres ver vibraciones de enlaces con H
+  ntc=2, ! SHAKE, hay que cambiarlo a 1 si quieres ver vibraciones de enlaces con H
+  tempi=0.0, ! temperatura inicial
+  temp0=300.0, ! temperatura objetivo
+  ntpr=100,
+  ntwx=100, ! Escribe la trayectoria cada 100 pasos
+  cut=8.0,
+  ntb=1, ! quiere decir que es a volumen cte
+  ntp=0, ! quiere decir que no se está controlando la presión
+  ntt=3, ! Que está usando el termostato de Langevin
+  gamma_ln=2.0,
+  nmropt=1,
+  ig=-1,
+  iwrap=1
+ /
+&wt type='TEMP0', istep1=0, istep2=8000, value1=0.0, value2=300.0 /
+&wt type='TEMP0', istep1=8001, istep2=10000, value1=300.0, value2=300.0 /
+&wt type='END' /

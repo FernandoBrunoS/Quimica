@@ -1,0 +1,5 @@
+parm sis.parm7
+trajin 02_Heat.nc 100 100
+trajout heat_100.pdb
+run
+quit

@@ -1,0 +1,11 @@
+Minimize
+ &cntrl
+  imin=1, ! Activa la minización
+  ntx=1, ! Lee las coordenadas sin velocidades
+  irest=0, ! No estamos reiniciando
+  maxcyc=5000, ! No de ciclos de steepest descent + gradiente conjugado
+  ncyc=2500, ! No de ciclos de steepest descent
+  ntpr=100, ! Cada cuanto se imprime en el archivo de salida
+  ntwx=0, ! No escribe velocidades
+  cut=8.0, ! Radio de corte de interacciones de corto alcance
+ /
